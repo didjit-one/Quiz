@@ -22,13 +22,14 @@ import android.widget.TextView;
 public class CheatActivity extends AppCompatActivity {
 
     private static final String EXTRA_ANSWER_IS_TRUE =
-            "com.bignerdranch.android.quiz.answer_is_true";
+            "com.bignerdranch.android.geoquiz.answer_is_true";
     private static final String EXTRA_ANSWER_SHOWN =
-            "com.bignerdranch.android.quiz.answer_shown";
+            "com.bignerdranch.android.geoquiz.answer_shown";
 
     private boolean mAnswerIsTrue;
 
     private TextView mAnswerTextView;
+    private TextView mAPI;
     private Button mShowAnswer;
 
     public static Intent newIntent(Context packageContext, boolean answerIsTrue) {
@@ -55,6 +56,8 @@ public class CheatActivity extends AppCompatActivity {
         mAnswerIsTrue = getIntent().getBooleanExtra(EXTRA_ANSWER_IS_TRUE, false);
 
         mAnswerTextView = (TextView)findViewById(R.id.answerTextView);
+        mAPI=(TextView)findViewById(R.id.API);
+        mAPI.setText("API "+String.valueOf(Build.VERSION.SDK_INT));
         mShowAnswer = (Button)findViewById(R.id.showAnswerButton);
         mShowAnswer.setOnClickListener(new View.OnClickListener() {
             @Override

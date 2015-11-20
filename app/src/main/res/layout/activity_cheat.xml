@@ -24,9 +24,21 @@
         android:padding="24dp" />
 
     <Button
-        android:id="@+id/showAnswerButton"
+
+    android:id="@+id/showAnswerButton"
         android:text="@string/show_answer_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+    style="@style/AppTheme"/>
+
+
+    <TextView
+
+        android:id="@+id/API"
+        tools:text="api"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:accessibilityLiveRegion="assertive"/>
 
 </LinearLayout>
